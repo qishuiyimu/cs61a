@@ -90,29 +90,29 @@ test = {
           'question': 'How do you write a doctest asserting that square(2) == 4?'
         },
         {
-          'answer': 'f48da7442af11bddcb273308a88a9970',
+          'answer': 'To investigate the values of variables at certain points in your code',
           'choices': [
             'For permanant debugging so you can have long term confidence in your code',
             'To ensure that certain conditions are true at certain points in your code',
             'To investigate the values of variables at certain points in your code'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'When should you use print statements?'
         },
         {
-          'answer': '57309603fab64e9deef8aab56ab89f9b',
+          'answer': "Print with 'DEBUG:' at the front of the outputted line",
           'choices': [
             "You don't need to do anything, ok only looks at returned values, not printed values",
             "Print with 'DEBUG:' at the front of the outputted line",
             'Print with # at the front of the outputted line'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'How do you prevent the ok autograder from interpreting print statements as output?'
         },
         {
-          'answer': '8a0e59465cbd3db201c83bad39a38190',
+          'answer': 'python3 ok -q sum_digits -i',
           'choices': [
             'python3 ok -q sum_digits -i',
             'python3 ok -q sum_digits --trace',
@@ -120,11 +120,11 @@ test = {
             'python3 -i lab01.py'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is the best way to open an interactive terminal to investigate a failing test for question sum_digits in assignment lab01?'
         },
         {
-          'answer': '6e09ba6ceb51b75e23dd4d881a6f277b',
+          'answer': 'python3 ok -q sum_digits --trace',
           'choices': [
             'python3 ok -q sum_digits -i',
             'python3 ok -q sum_digits --trace',
@@ -132,11 +132,11 @@ test = {
             'python3 -i lab01.py'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is the best way to look at an environment diagram to investigate a failing test for question sum_digits in assignment lab01?'
         },
         {
-          'answer': '5c1e38494cf0399527b69ad7bd7037f2',
+          'answer': 'Code that returns a wrong answer instead of crashing is generally better as it at least works fine',
           'choices': [
             'Code that returns a wrong answer instead of crashing is generally better as it at least works fine',
             'Testing is very important to ensure robust code',
@@ -145,11 +145,11 @@ test = {
             'It is generally good practice to release code with assertion statements left in'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'Which of the following is NOT true?'
         },
         {
-          'answer': '7b899f9edfdcffe34120375d36d49ff0',
+          'answer': 'You had an unmatched parenthesis',
           'choices': [
             'You had an unmatched parenthesis',
             'Your indentation mixed tabs and spaces',
@@ -157,11 +157,11 @@ test = {
             'You typed a variable name incorrectly'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'You get a SyntaxError. What is most likely to have happened?'
         },
         {
-          'answer': '12da8f0e726f72da45b4fbde67210b74',
+          'answer': 'Your indentation mixed tabs and spaces',
           'choices': [
             'You had an unmatched parenthesis',
             'Your indentation mixed tabs and spaces',
@@ -169,11 +169,11 @@ test = {
             'You typed a variable name incorrectly'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'You get a IndentationError. What is most likely to have happened?'
         },
         {
-          'answer': 'af7bf6f5e80555885d574f5a2ab3153f',
+          'answer': 'You forgot a return statement',
           'choices': [
             'You had an unmatched parenthesis',
             'Your indentation mixed tabs and spaces',
@@ -181,11 +181,11 @@ test = {
             'You typed a variable name incorrectly'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': "You get a TypeError: ... 'NoneType' object is not ... . What is most likely to have happened?"
         },
         {
-          'answer': '1d0b04e3bcf143b57b5f0b67e57c6801',
+          'answer': 'You typed a variable name incorrectly',
           'choices': [
             'You had an unmatched parenthesis',
             'Your indentation mixed tabs and spaces',
@@ -193,7 +193,7 @@ test = {
             'You typed a variable name incorrectly'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'You get a NameError. What is most likely to have happened?'
         }
       ],
