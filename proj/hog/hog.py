@@ -286,7 +286,6 @@ def announce_highest(who, last_score=0, running_high=0):
             current_score=score0
         else:
             current_score=score1
-            
         if(current_score-last_score>running_high):
             record=current_score-last_score
             print(record,'point(s)! The most yet for Player',who)
@@ -334,6 +333,14 @@ def make_averaged(original_function, trials_count=1000):
     """
     # BEGIN PROBLEM 8
     "*** YOUR CODE HERE ***"
+    def average_function(*args):
+        i,sum=0,0
+        while(i<trials_count):
+            sum += original_function(*args)
+            i+=1
+        result = sum / trials_count
+        return result
+    return average_function
     # END PROBLEM 8
 
 
@@ -348,6 +355,15 @@ def max_scoring_num_rolls(dice=six_sided, trials_count=1000):
     """
     # BEGIN PROBLEM 9
     "*** YOUR CODE HERE ***"
+    i,max_average_score,num1=1,0,0
+    averaged_roll_dice=make_averaged(roll_dice,trials_count)
+    while(i<=10):
+        average_score=averaged_roll_dice(i,dice)
+        if(max_average_score<average_score):
+            max_average_score=average_score
+            num1=i
+        i+=1
+    return num1
     # END PROBLEM 9
 
 
@@ -397,7 +413,11 @@ def bacon_strategy(score, opponent_score, cutoff=8, num_rolls=6):
     rolls NUM_ROLLS otherwise.
     """
     # BEGIN PROBLEM 10
-    return 6  # Replace this statement
+    point=free_bacon(opponent_score)
+    if(point>=cutoff):
+        return 0
+    else:
+        return num_rolls  # Replace this statement
     # END PROBLEM 10
 
 
@@ -407,7 +427,11 @@ def extra_turn_strategy(score, opponent_score, cutoff=8, num_rolls=6):
     Otherwise, it rolls NUM_ROLLS.
     """
     # BEGIN PROBLEM 11
-    return 6  # Replace this statement
+    point=free_bacon(opponent_score)
+    if(extra_turn(score+point,opponent_score)):
+        return 0
+    else:
+        return bacon_strategy(score,opponent_score,cutoff,num_rolls) # Replace this statement
     # END PROBLEM 11
 
 
